@@ -6,7 +6,8 @@ wget https://storage.googleapis.com/isl-datasets/SID/Sony.zip
 
 # unzip dataset
 unzip -q Sony.zip
-mv Sony SID_cvpr_18_dataset
+mkdir SID_cvpr_18_dataset
+mv Sony SID_cvpr_18_dataset/Sony
 
 # install packages
 pip install torch
