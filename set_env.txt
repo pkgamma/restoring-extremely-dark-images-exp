@@ -22,7 +22,7 @@ git clone https://github.com/pkgamma/restoring-extremely-dark-images-exp.git
 
 # test packages
 git clone https://github.com/MohitLamba94/Restoring-Extremely-Dark-Images-In-Real-Time.git
-cd Restoring-Extremely-Dark-Images-In-Real-Time.
+cd Restoring-Extremely-Dark-Images-In-Real-Time
 python3 demo.py
 
 
