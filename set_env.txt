@@ -5,7 +5,8 @@ nvidia-smi
 wget https://storage.googleapis.com/isl-datasets/SID/Sony.zip
 
 # unzip dataset
-unzip -q Sony.zip SID_cvpr_18_dataset
+unzip -q Sony.zip
+mv Sony SID_cvpr_18_dataset
 
 # install packages
 pip install torch
