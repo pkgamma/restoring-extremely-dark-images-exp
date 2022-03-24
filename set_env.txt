@@ -33,7 +33,6 @@ cd your_target_folder
 
 # run code in tmux
 tmux
-python3 train.py
 
 # wait for the program starting printing epoch (iteration) counter
 # then detach this session
