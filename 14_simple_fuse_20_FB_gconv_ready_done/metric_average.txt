@@ -1,0 +1,5 @@
+-- psnr_avg:12.596285234774216, ssim_avg:0.0777184601310649, c_gt_avg:0.0, c_pred_avg:0.0, iter:2
+-- psnr_avg:21.767818017661874, ssim_avg:0.6255039325826349, c_gt_avg:0.0, c_pred_avg:0.0, iter:70002
+-- psnr_avg:21.761668374088373, ssim_avg:0.6457540156587614, c_gt_avg:0.0, c_pred_avg:0.0, iter:100002
+-- psnr_avg:22.150890323953185, ssim_avg:0.6448832059794073, c_gt_avg:0.0, c_pred_avg:0.0, iter:150002
+-- psnr_avg:22.1451393516872, ssim_avg:0.6452976969664096, c_gt_avg:0.0, c_pred_avg:0.0, iter:200002

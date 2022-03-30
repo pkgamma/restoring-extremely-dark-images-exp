@@ -1,0 +1,315 @@
+
+---Our Model parameters : 784768
+
+
+---SID model parameters : 7760748
+
+
+---LSE Model parameters : 1224
+
+
+---FB2 Model parameters : 7224
+
+
+---MSE model parameters : 73984
+
+
+---FB1 model parameters : 64960
+
+
+---HSE model parameters : 634944
+
+
+---HSEup model parameters : 2432
+
+zeros org: 0
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+├─Sequential: 1-1                        [-1, 64, 64, 128]         --
+|    └─Sequential: 2-1                   [-1, 128, 64, 128]        --
+|    |    └─Conv2d: 3-1                  [-1, 128, 64, 128]        9,472
+|    └─Sequential: 2-2                   [-1, 64, 64, 128]         --
+|    |    └─Conv2d: 3-2                  [-1, 64, 64, 128]         73,856
+├─RDB: 1-2                               [-1, 64, 64, 128]         --
+|    └─Sequential: 2-3                   [-1, 192, 64, 128]        --
+|    |    └─make_dense: 3-3              [-1, 96, 64, 128]         18,464
+|    |    └─make_dense: 3-4              [-1, 128, 64, 128]        27,680
+|    |    └─make_dense: 3-5              [-1, 160, 64, 128]        36,896
+|    |    └─make_dense: 3-6              [-1, 192, 64, 128]        46,112
+|    └─Sequential: 2-4                   [-1, 64, 64, 128]         --
+|    |    └─Conv2d: 3-7                  [-1, 64, 64, 128]         12,352
+├─RDB: 1-3                               [-1, 64, 64, 128]         --
+|    └─Sequential: 2-5                   [-1, 224, 64, 128]        --
+|    |    └─make_dense: 3-8              [-1, 96, 64, 128]         18,464
+|    |    └─make_dense: 3-9              [-1, 128, 64, 128]        27,680
+|    |    └─make_dense: 3-10             [-1, 160, 64, 128]        36,896
+|    |    └─make_dense: 3-11             [-1, 192, 64, 128]        46,112
+|    |    └─make_dense: 3-12             [-1, 224, 64, 128]        55,328
+|    └─Sequential: 2-6                   [-1, 64, 64, 128]         --
+|    |    └─Conv2d: 3-13                 [-1, 64, 64, 128]         14,400
+├─RDB: 1-4                               [-1, 64, 64, 128]         --
+|    └─Sequential: 2-7                   [-1, 224, 64, 128]        --
+|    |    └─make_dense: 3-14             [-1, 96, 64, 128]         18,464
+|    |    └─make_dense: 3-15             [-1, 128, 64, 128]        27,680
+|    |    └─make_dense: 3-16             [-1, 160, 64, 128]        36,896
+|    |    └─make_dense: 3-17             [-1, 192, 64, 128]        46,112
+|    |    └─make_dense: 3-18             [-1, 224, 64, 128]        55,328
+|    └─Sequential: 2-8                   [-1, 64, 64, 128]         --
+|    |    └─Conv2d: 3-19                 [-1, 64, 64, 128]         14,400
+├─Sequential: 1-5                        [-1, 64, 64, 128]         --
+|    └─Conv2d: 2-9                       [-1, 64, 64, 128]         12,352
+├─PixelShuffle: 1-6                      [-1, 4, 256, 512]         --
+├─Sequential: 1                          []                        --
+|    └─PixelShuffle: 2-10                [-1, 4, 256, 512]         --
+├─Sequential: 1-7                        [-1, 64, 256, 512]        --
+|    └─Conv2d: 2-11                      [-1, 64, 256, 512]        2,432
+├─ResBlock: 1-8                          [-1, 64, 256, 512]        --
+|    └─Sequential: 2-12                  [-1, 64, 256, 512]        --
+|    |    └─Conv2d: 3-20                 [-1, 64, 256, 512]        36,992
+|    |    └─LeakyReLU: 3-21              [-1, 64, 256, 512]        --
+|    └─Sequential: 2-13                  [-1, 64, 256, 512]        --
+|    |    └─Conv2d: 3-22                 [-1, 64, 256, 512]        36,992
+├─Sequential: 1-9                        [-1, 12, 1024, 2048]      --
+|    └─Sequential: 2-14                  [-1, 32, 256, 512]        --
+|    |    └─Conv2d: 3-23                 [-1, 32, 256, 512]        9,280
+|    └─Sequential: 2-15                  [-1, 192, 256, 512]       --
+|    |    └─Conv2d: 3-24                 [-1, 192, 256, 512]       55,680
+|    |    └─LeakyReLU: 3-25              [-1, 192, 256, 512]       --
+├─PixelShuffle: 1-10                     [-1, 12, 1024, 2048]      --
+├─Sequential: 1                          []                        --
+|    └─PixelShuffle: 2-16                [-1, 12, 1024, 2048]      --
+├─Sequential: 1-11                       [-1, 12, 1024, 2048]      --
+|    └─Conv2d: 2-17                      [-1, 12, 1024, 2048]      1,224
+├─Sequential: 1-12                       [-1, 12, 1024, 2048]      --
+|    └─Conv2d: 2-18                      [-1, 12, 1024, 2048]      7,224
+├─PixelShuffle: 1-13                     [-1, 3, 2048, 4096]       --
+==========================================================================================
+Total params: 784,768
+Trainable params: 784,768
+Non-trainable params: 0
+Total mult-adds (M): 2.83
+==========================================================================================
+Input size (MB): 32.00
+Forward/backward pass size (MB): 828.00
+Params size (MB): 2.99
+Estimated Total Size (MB): 862.99
+==========================================================================================
+Warning: module PixelShuffle is treated as a zero-op.
+Warning: module make_dense is treated as a zero-op.
+Warning: module RDB is treated as a zero-op.
+Warning: module ResBlock is treated as a zero-op.
+Warning: module Net is treated as a zero-op.
+Net(
+  0.785 M, 100.000% Params, 41.383 GMac, 100.000% MACs, 
+  (up4): PixelShuffle(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, upscale_factor=4)
+  (up2): PixelShuffle(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, upscale_factor=2)
+  (conv32x): Sequential(
+    0.083 M, 10.618% Params, 0.681 GMac, 1.646% MACs, 
+    (0): Sequential(
+      0.009 M, 1.207% Params, 0.077 GMac, 0.185% MACs, 
+      (0): Conv2d(0.009 M, 1.207% Params, 0.077 GMac, 0.185% MACs, 1024, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128)
+    )
+    (1): Sequential(
+      0.074 M, 9.411% Params, 0.605 GMac, 1.461% MACs, 
+      (0): Conv2d(0.074 M, 9.411% Params, 0.605 GMac, 1.461% MACs, 128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+  )
+  (RDB1): RDB(
+    0.142 M, 18.031% Params, 1.161 GMac, 2.805% MACs, 
+    (dense_layers): Sequential(
+      0.129 M, 16.457% Params, 1.06 GMac, 2.562% MACs, 
+      (0): make_dense(
+        0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+        (conv): Sequential(
+          0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+          (0): Conv2d(0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (1): make_dense(
+        0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+        (conv): Sequential(
+          0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.002% MACs, negative_slope=0.2)
+          (1): Conv2d(0.028 M, 3.527% Params, 0.226 GMac, 0.547% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (2): make_dense(
+        0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+        (conv): Sequential(
+          0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=0.2)
+          (1): Conv2d(0.037 M, 4.702% Params, 0.302 GMac, 0.730% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (3): make_dense(
+        0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+        (conv): Sequential(
+          0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=1)
+          (1): Conv2d(0.046 M, 5.876% Params, 0.377 GMac, 0.912% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (conv_1x1): Sequential(
+      0.012 M, 1.574% Params, 0.101 GMac, 0.243% MACs, 
+      (0): Conv2d(0.012 M, 1.574% Params, 0.101 GMac, 0.243% MACs, 192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (RDB2): RDB(
+    0.199 M, 25.343% Params, 1.632 GMac, 3.944% MACs, 
+    (dense_layers): Sequential(
+      0.184 M, 23.508% Params, 1.515 GMac, 3.660% MACs, 
+      (0): make_dense(
+        0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+        (conv): Sequential(
+          0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+          (0): Conv2d(0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (1): make_dense(
+        0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+        (conv): Sequential(
+          0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.002% MACs, negative_slope=0.2)
+          (1): Conv2d(0.028 M, 3.527% Params, 0.226 GMac, 0.547% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (2): make_dense(
+        0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+        (conv): Sequential(
+          0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=0.2)
+          (1): Conv2d(0.037 M, 4.702% Params, 0.302 GMac, 0.730% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (3): make_dense(
+        0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+        (conv): Sequential(
+          0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=0.2)
+          (1): Conv2d(0.046 M, 5.876% Params, 0.377 GMac, 0.912% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (4): make_dense(
+        0.055 M, 7.050% Params, 0.455 GMac, 1.098% MACs, 
+        (conv): Sequential(
+          0.055 M, 7.050% Params, 0.455 GMac, 1.098% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.002 GMac, 0.004% MACs, negative_slope=1)
+          (1): Conv2d(0.055 M, 7.050% Params, 0.453 GMac, 1.095% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (conv_1x1): Sequential(
+      0.014 M, 1.835% Params, 0.117 GMac, 0.284% MACs, 
+      (0): Conv2d(0.014 M, 1.835% Params, 0.117 GMac, 0.284% MACs, 224, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (RDB3): RDB(
+    0.199 M, 25.343% Params, 1.632 GMac, 3.944% MACs, 
+    (dense_layers): Sequential(
+      0.184 M, 23.508% Params, 1.515 GMac, 3.660% MACs, 
+      (0): make_dense(
+        0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+        (conv): Sequential(
+          0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 
+          (0): Conv2d(0.018 M, 2.353% Params, 0.151 GMac, 0.365% MACs, 64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (1): make_dense(
+        0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+        (conv): Sequential(
+          0.028 M, 3.527% Params, 0.227 GMac, 0.549% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.002% MACs, negative_slope=0.2)
+          (1): Conv2d(0.028 M, 3.527% Params, 0.226 GMac, 0.547% MACs, 96, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (2): make_dense(
+        0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+        (conv): Sequential(
+          0.037 M, 4.702% Params, 0.303 GMac, 0.732% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=0.2)
+          (1): Conv2d(0.037 M, 4.702% Params, 0.302 GMac, 0.730% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (3): make_dense(
+        0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+        (conv): Sequential(
+          0.046 M, 5.876% Params, 0.379 GMac, 0.915% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.001 GMac, 0.003% MACs, negative_slope=0.2)
+          (1): Conv2d(0.046 M, 5.876% Params, 0.377 GMac, 0.912% MACs, 160, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (4): make_dense(
+        0.055 M, 7.050% Params, 0.455 GMac, 1.098% MACs, 
+        (conv): Sequential(
+          0.055 M, 7.050% Params, 0.455 GMac, 1.098% MACs, 
+          (0): LeakyReLU(0.0 M, 0.000% Params, 0.002 GMac, 0.004% MACs, negative_slope=1)
+          (1): Conv2d(0.055 M, 7.050% Params, 0.453 GMac, 1.095% MACs, 192, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (conv_1x1): Sequential(
+      0.014 M, 1.835% Params, 0.117 GMac, 0.284% MACs, 
+      (0): Conv2d(0.014 M, 1.835% Params, 0.117 GMac, 0.284% MACs, 224, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    )
+  )
+  (rdball): Sequential(
+    0.012 M, 1.574% Params, 0.101 GMac, 0.243% MACs, 
+    (0): Conv2d(0.012 M, 1.574% Params, 0.101 GMac, 0.243% MACs, 192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  )
+  (conv_rdb8x): Sequential(
+    0.002 M, 0.310% Params, 0.31 GMac, 0.750% MACs, 
+    (0): Conv2d(0.002 M, 0.310% Params, 0.31 GMac, 0.750% MACs, 4, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (resblock8x): ResBlock(
+    0.074 M, 9.427% Params, 9.689 GMac, 23.413% MACs, 
+    (conv1): Sequential(
+      0.037 M, 4.714% Params, 4.849 GMac, 11.717% MACs, 
+      (0): Conv2d(0.037 M, 4.714% Params, 4.84 GMac, 11.696% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(0.0 M, 0.000% Params, 0.008 GMac, 0.020% MACs, negative_slope=0.2)
+    )
+    (conv2): Sequential(
+      0.037 M, 4.714% Params, 4.84 GMac, 11.696% MACs, 
+      (0): Conv2d(0.037 M, 4.714% Params, 4.84 GMac, 11.696% MACs, 64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+  )
+  (conv32_8_cat): Sequential(
+    0.065 M, 8.278% Params, 8.51 GMac, 20.565% MACs, 
+    (0): Sequential(
+      0.009 M, 1.183% Params, 1.212 GMac, 2.929% MACs, 
+      (0): Conv2d(0.009 M, 1.183% Params, 1.212 GMac, 2.929% MACs, 128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=4)
+    )
+    (1): Sequential(
+      0.056 M, 7.095% Params, 7.298 GMac, 17.636% MACs, 
+      (0): Conv2d(0.056 M, 7.095% Params, 7.273 GMac, 17.575% MACs, 32, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): LeakyReLU(0.0 M, 0.000% Params, 0.025 GMac, 0.061% MACs, negative_slope=0.2)
+    )
+    (2): PixelShuffle(0.0 M, 0.000% Params, 0.0 GMac, 0.000% MACs, upscale_factor=4)
+  )
+  (conv2x): Sequential(
+    0.001 M, 0.156% Params, 2.542 GMac, 6.142% MACs, 
+    (0): Conv2d(0.001 M, 0.156% Params, 2.542 GMac, 6.142% MACs, 4, 12, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  )
+  (conv_2_8_32): Sequential(
+    0.007 M, 0.921% Params, 15.125 GMac, 36.548% MACs, 
+    (0): Conv2d(0.007 M, 0.921% Params, 15.125 GMac, 36.548% MACs, 24, 12, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+  )
+)
+Computational complexity of Our model for a 8MP image:   41382576128.0
+Computational complexity of SID model for a 8MP image:   440.46 GMac
+Computational complexity of model_lse model for a 8MP/2 image:   2.54 GMac
+Computational complexity of model_fb2 model for a 8MP/2 image:   15.12 GMac
+Computational complexity of model_mse model for a 8MP/8 image:   9.69 GMac
+Computational complexity of model_fb1 model for a 8MP/8 image:   8.51 GMac
+Computational complexity of model_hse model for a 8MP/16 image:   5.21 GMac
+Computational complexity of model_hseup model for a 8MP/16 image:   0.31 GMac
+Beginning Warmup...
+Time taken by our model on CPU for 8MP image : 4.020788955688476 seconds
+Time taken by SID model on CPU for 8MP image : 25.904440784454344 seconds
+Time taken by model_lse on CPU for 8MP/2 image : 0.3005927562713623 seconds
+Time taken by model_fb2 on CPU for 8MP/2 image : 1.6918099880218507 seconds
+Time taken by model_mse on CPU for 8MP/8 image : 0.5365665912628174 seconds
+Time taken by model_fb1 on CPU for 8MP/8 image : 0.5599881649017334 seconds
+Time taken by model_hse on CPU for 8MP/32 image : 0.422963809967041 seconds
+Time taken by model_hseup on CPU for 8MP/32 image : 0.026244974136352538 seconds
