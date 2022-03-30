@@ -12,7 +12,7 @@ mv Sony SID_cvpr_18_dataset/Sony
 # install packages
 pip install torch
 pip install rawpy
-pip install image
+pip install imageio
 pip install torchvision
 pip install scikit-image
 pip install ptflops
