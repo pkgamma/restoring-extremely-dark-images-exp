@@ -1,5 +1,3 @@
-git pull
-
 ##### simple_fuse_12_LSE_2conv_4_12_4_k3_MSE_32_G24_ready #####
 unzip -q simple_fuse_12_LSE_2conv_4_12_4_k3_MSE_32_G24_ready.zip
 cd simple_fuse_12_LSE_2conv_4_12_4_k3_MSE_32_G24_ready
