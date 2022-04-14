@@ -1,0 +1,7 @@
+-- psnr_avg:12.441035814628881, ssim_avg:0.06875495790794146, c_gt_avg:0.0, c_pred_avg:0.0, iter:2
+-- psnr_avg:22.59440700343309, ssim_avg:0.7049728951741714, c_gt_avg:0.0, c_pred_avg:0.0, iter:150002
+-- psnr_avg:22.394428562737268, ssim_avg:0.7163036280675893, c_gt_avg:0.0, c_pred_avg:0.0, iter:200002
+-- psnr_avg:22.404051316670262, ssim_avg:0.6975861158626685, c_gt_avg:0.0, c_pred_avg:0.0, iter:70002
+-- psnr_avg:22.596972224473934, ssim_avg:0.7040129663115784, c_gt_avg:0.0, c_pred_avg:0.0, iter:100002
+-- psnr_avg:23.096101490412593, ssim_avg:0.7137093958480061, c_gt_avg:0.0, c_pred_avg:0.0, iter:150002
+-- psnr_avg:22.753993898568787, ssim_avg:0.7053283822558444, c_gt_avg:0.0, c_pred_avg:0.0, iter:200002
